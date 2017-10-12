@@ -1,0 +1,15 @@
+a06aff57706e5d9d2becafd00e4a8a3f
+'use strict'; // basics of how testing works
+
+// failing test
+var add = function add(a, b) {return a + b + 1;};
+
+// test - global variable provided by JEST
+test('should add 2 numbers', function () {
+  // test will not pass if we throw an error from this function
+  var result = add(3, 4);
+  if (result !== 7) {
+    throw new Error('You added 4 and 3, the result was #' + result + ', expected 7');
+  }
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC50ZXN0LmpzIl0sIm5hbWVzIjpbImFkZCIsImEiLCJiIiwidGVzdCIsInJlc3VsdCIsIkVycm9yIl0sIm1hcHBpbmdzIjoiY0FBQTs7QUFFQTtBQUNBLElBQU1BLE1BQU0sU0FBTkEsR0FBTSxDQUFDQyxDQUFELEVBQUlDLENBQUosVUFBVUQsSUFBSUMsQ0FBSixHQUFRLENBQWxCLEVBQVo7O0FBRUE7QUFDQUMsS0FBSyxzQkFBTCxFQUE2QixZQUFNO0FBQ2pDO0FBQ0EsTUFBTUMsU0FBU0osSUFBSSxDQUFKLEVBQU8sQ0FBUCxDQUFmO0FBQ0EsTUFBR0ksV0FBVyxDQUFkLEVBQWlCO0FBQ2YsVUFBTSxJQUFJQyxLQUFKLHlDQUFnREQsTUFBaEQsa0JBQU47QUFDRDtBQUNGLENBTkQiLCJmaWxlIjoiYWRkLnRlc3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBiYXNpY3Mgb2YgaG93IHRlc3Rpbmcgd29ya3NcblxuLy8gZmFpbGluZyB0ZXN0XG5jb25zdCBhZGQgPSAoYSwgYikgPT4gYSArIGIgKyAxO1xuXG4vLyB0ZXN0IC0gZ2xvYmFsIHZhcmlhYmxlIHByb3ZpZGVkIGJ5IEpFU1RcbnRlc3QoJ3Nob3VsZCBhZGQgMiBudW1iZXJzJywgKCkgPT4ge1xuICAvLyB0ZXN0IHdpbGwgbm90IHBhc3MgaWYgd2UgdGhyb3cgYW4gZXJyb3IgZnJvbSB0aGlzIGZ1bmN0aW9uXG4gIGNvbnN0IHJlc3VsdCA9IGFkZCgzLCA0KTtcbiAgaWYocmVzdWx0ICE9PSA3KSB7XG4gICAgdGhyb3cgbmV3IEVycm9yKGBZb3UgYWRkZWQgNCBhbmQgMywgdGhlIHJlc3VsdCB3YXMgIyR7cmVzdWx0fSwgZXhwZWN0ZWQgN2ApXG4gIH1cbn0pO1xuIl19

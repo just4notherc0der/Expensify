@@ -1,0 +1,46 @@
+c0c69d65855856bc1a2c7fe9ed171298
+'use strict';var _filters = require('../../actions/filters');
+
+
+
+
+
+
+
+/* These work differently, setup later
+                                                              test('should generate set start date action object', () => {
+                                                                const action = setStartDate(moment(0));
+                                                              
+                                                                expect(action).toEqual({
+                                                                  type: 'SET_START_DATE',
+                                                                  startDate: moment(0)
+                                                                })
+                                                              });
+                                                              
+                                                              test('should generate set end date action object', () => {
+                                                                const action = setEndDate(moment(0));
+                                                              
+                                                                expect(action).toEqual({
+                                                                  type: 'SET_END_DATE',
+                                                                  endDate: moment(0)
+                                                                })
+                                                              });*/
+
+// sortByDate
+test('Should generate sort by date action object', function () {
+  var action = (0, _filters.sortByDate)();
+
+  expect(action).toEqual({
+    type: 'SORT_BY_DATE' });
+
+});
+
+// sortByAmount
+test('Should generate sort by amount action object', function () {
+  var action = (0, _filters.sortByAmount)();
+
+  expect(action).toEqual({
+    type: 'SORT_BY_AMOUNT' });
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpbHRlcnMudGVzdC5qcyJdLCJuYW1lcyI6WyJ0ZXN0IiwiYWN0aW9uIiwiZXhwZWN0IiwidG9FcXVhbCIsInR5cGUiXSwibWFwcGluZ3MiOiJhQUFBOzs7Ozs7OztBQVFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBbUJBO0FBQ0FBLEtBQUssNENBQUwsRUFBbUQsWUFBTTtBQUN2RCxNQUFNQyxTQUFTLDBCQUFmOztBQUVBQyxTQUFPRCxNQUFQLEVBQWVFLE9BQWYsQ0FBdUI7QUFDckJDLFVBQU0sY0FEZSxFQUF2Qjs7QUFHRCxDQU5EOztBQVFBO0FBQ0FKLEtBQUssOENBQUwsRUFBcUQsWUFBTTtBQUN6RCxNQUFNQyxTQUFTLDRCQUFmOztBQUVBQyxTQUFPRCxNQUFQLEVBQWVFLE9BQWYsQ0FBdUI7QUFDckJDLFVBQU0sZ0JBRGUsRUFBdkI7O0FBR0QsQ0FORCIsImZpbGUiOiJmaWx0ZXJzLnRlc3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xuICBzZXRTdGFydERhdGUsXG4gIHNldEVuZERhdGUsXG4gIHNvcnRCeURhdGUsXG4gIHNvcnRCeUFtb3VudCxcbiAgc2V0VGV4dEZpbHRlclxufSBmcm9tICcuLi8uLi9hY3Rpb25zL2ZpbHRlcnMnO1xuXG4vKiBUaGVzZSB3b3JrIGRpZmZlcmVudGx5LCBzZXR1cCBsYXRlclxudGVzdCgnc2hvdWxkIGdlbmVyYXRlIHNldCBzdGFydCBkYXRlIGFjdGlvbiBvYmplY3QnLCAoKSA9PiB7XG4gIGNvbnN0IGFjdGlvbiA9IHNldFN0YXJ0RGF0ZShtb21lbnQoMCkpO1xuXG4gIGV4cGVjdChhY3Rpb24pLnRvRXF1YWwoe1xuICAgIHR5cGU6ICdTRVRfU1RBUlRfREFURScsXG4gICAgc3RhcnREYXRlOiBtb21lbnQoMClcbiAgfSlcbn0pO1xuXG50ZXN0KCdzaG91bGQgZ2VuZXJhdGUgc2V0IGVuZCBkYXRlIGFjdGlvbiBvYmplY3QnLCAoKSA9PiB7XG4gIGNvbnN0IGFjdGlvbiA9IHNldEVuZERhdGUobW9tZW50KDApKTtcblxuICBleHBlY3QoYWN0aW9uKS50b0VxdWFsKHtcbiAgICB0eXBlOiAnU0VUX0VORF9EQVRFJyxcbiAgICBlbmREYXRlOiBtb21lbnQoMClcbiAgfSlcbn0pOyovXG5cbi8vIHNvcnRCeURhdGVcbnRlc3QoJ1Nob3VsZCBnZW5lcmF0ZSBzb3J0IGJ5IGRhdGUgYWN0aW9uIG9iamVjdCcsICgpID0+IHtcbiAgY29uc3QgYWN0aW9uID0gc29ydEJ5RGF0ZSgpO1xuXG4gIGV4cGVjdChhY3Rpb24pLnRvRXF1YWwoe1xuICAgIHR5cGU6ICdTT1JUX0JZX0RBVEUnXG4gIH0pO1xufSk7XG5cbi8vIHNvcnRCeUFtb3VudFxudGVzdCgnU2hvdWxkIGdlbmVyYXRlIHNvcnQgYnkgYW1vdW50IGFjdGlvbiBvYmplY3QnLCAoKSA9PiB7XG4gIGNvbnN0IGFjdGlvbiA9IHNvcnRCeUFtb3VudCgpO1xuXG4gIGV4cGVjdChhY3Rpb24pLnRvRXF1YWwoe1xuICAgIHR5cGU6ICdTT1JUX0JZX0FNT1VOVCdcbiAgfSk7XG59KTtcbiJdfQ==

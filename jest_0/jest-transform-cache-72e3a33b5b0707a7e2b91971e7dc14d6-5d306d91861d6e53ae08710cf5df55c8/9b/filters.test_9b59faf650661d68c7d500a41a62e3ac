@@ -1,0 +1,56 @@
+a6b5f81c6f8cda1cfbcac81965b02f80
+'use strict';var _filters = require('../../actions/filters');
+
+
+
+
+
+
+
+/* These work differently, setup later
+                                                              test('should generate set start date action object', () => {
+                                                                const action = setStartDate(moment(0));
+                                                              
+                                                                expect(action).toEqual({
+                                                                  type: 'SET_START_DATE',
+                                                                  startDate: moment(0)
+                                                                })
+                                                              });
+                                                              
+                                                              test('should generate set end date action object', () => {
+                                                                const action = setEndDate(moment(0));
+                                                              
+                                                                expect(action).toEqual({
+                                                                  type: 'SET_END_DATE',
+                                                                  endDate: moment(0)
+                                                                })
+                                                              });*/
+
+// sortByDate
+test('Should generate sort by date action object', function () {
+  var action = (0, _filters.sortByDate)();
+
+  expect(action).toEqual({
+    type: 'SORT_BY_DATE' });
+
+});
+
+// sortByAmount
+test('Should generate sort by amount action object', function () {
+  var action = (0, _filters.sortByAmount)();
+
+  expect(action).toEqual({
+    type: 'SORT_BY_AMOUNT' });
+
+});
+
+// setTextFilter
+test('Should generate set text filter action object with correct passed in value', function () {
+  var action = (0, _filters.setTextFilter)('Something');
+
+  expect(action).toEqual({
+    type: 'SET_TEXT_FILTER',
+    text: 'Something' });
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpbHRlcnMudGVzdC5qcyJdLCJuYW1lcyI6WyJ0ZXN0IiwiYWN0aW9uIiwiZXhwZWN0IiwidG9FcXVhbCIsInR5cGUiLCJ0ZXh0Il0sIm1hcHBpbmdzIjoiYUFBQTs7Ozs7Ozs7QUFRQTs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQW1CQTtBQUNBQSxLQUFLLDRDQUFMLEVBQW1ELFlBQU07QUFDdkQsTUFBTUMsU0FBUywwQkFBZjs7QUFFQUMsU0FBT0QsTUFBUCxFQUFlRSxPQUFmLENBQXVCO0FBQ3JCQyxVQUFNLGNBRGUsRUFBdkI7O0FBR0QsQ0FORDs7QUFRQTtBQUNBSixLQUFLLDhDQUFMLEVBQXFELFlBQU07QUFDekQsTUFBTUMsU0FBUyw0QkFBZjs7QUFFQUMsU0FBT0QsTUFBUCxFQUFlRSxPQUFmLENBQXVCO0FBQ3JCQyxVQUFNLGdCQURlLEVBQXZCOztBQUdELENBTkQ7O0FBUUE7QUFDQUosS0FBSyw0RUFBTCxFQUFtRixZQUFNO0FBQ3ZGLE1BQU1DLFNBQVMsNEJBQWMsV0FBZCxDQUFmOztBQUVBQyxTQUFPRCxNQUFQLEVBQWVFLE9BQWYsQ0FBdUI7QUFDckJDLFVBQU0saUJBRGU7QUFFckJDLFVBQU0sV0FGZSxFQUF2Qjs7QUFJRCxDQVBEIiwiZmlsZSI6ImZpbHRlcnMudGVzdC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7XG4gIHNldFN0YXJ0RGF0ZSxcbiAgc2V0RW5kRGF0ZSxcbiAgc29ydEJ5RGF0ZSxcbiAgc29ydEJ5QW1vdW50LFxuICBzZXRUZXh0RmlsdGVyXG59IGZyb20gJy4uLy4uL2FjdGlvbnMvZmlsdGVycyc7XG5cbi8qIFRoZXNlIHdvcmsgZGlmZmVyZW50bHksIHNldHVwIGxhdGVyXG50ZXN0KCdzaG91bGQgZ2VuZXJhdGUgc2V0IHN0YXJ0IGRhdGUgYWN0aW9uIG9iamVjdCcsICgpID0+IHtcbiAgY29uc3QgYWN0aW9uID0gc2V0U3RhcnREYXRlKG1vbWVudCgwKSk7XG5cbiAgZXhwZWN0KGFjdGlvbikudG9FcXVhbCh7XG4gICAgdHlwZTogJ1NFVF9TVEFSVF9EQVRFJyxcbiAgICBzdGFydERhdGU6IG1vbWVudCgwKVxuICB9KVxufSk7XG5cbnRlc3QoJ3Nob3VsZCBnZW5lcmF0ZSBzZXQgZW5kIGRhdGUgYWN0aW9uIG9iamVjdCcsICgpID0+IHtcbiAgY29uc3QgYWN0aW9uID0gc2V0RW5kRGF0ZShtb21lbnQoMCkpO1xuXG4gIGV4cGVjdChhY3Rpb24pLnRvRXF1YWwoe1xuICAgIHR5cGU6ICdTRVRfRU5EX0RBVEUnLFxuICAgIGVuZERhdGU6IG1vbWVudCgwKVxuICB9KVxufSk7Ki9cblxuLy8gc29ydEJ5RGF0ZVxudGVzdCgnU2hvdWxkIGdlbmVyYXRlIHNvcnQgYnkgZGF0ZSBhY3Rpb24gb2JqZWN0JywgKCkgPT4ge1xuICBjb25zdCBhY3Rpb24gPSBzb3J0QnlEYXRlKCk7XG5cbiAgZXhwZWN0KGFjdGlvbikudG9FcXVhbCh7XG4gICAgdHlwZTogJ1NPUlRfQllfREFURSdcbiAgfSk7XG59KTtcblxuLy8gc29ydEJ5QW1vdW50XG50ZXN0KCdTaG91bGQgZ2VuZXJhdGUgc29ydCBieSBhbW91bnQgYWN0aW9uIG9iamVjdCcsICgpID0+IHtcbiAgY29uc3QgYWN0aW9uID0gc29ydEJ5QW1vdW50KCk7XG5cbiAgZXhwZWN0KGFjdGlvbikudG9FcXVhbCh7XG4gICAgdHlwZTogJ1NPUlRfQllfQU1PVU5UJ1xuICB9KTtcbn0pO1xuXG4vLyBzZXRUZXh0RmlsdGVyXG50ZXN0KCdTaG91bGQgZ2VuZXJhdGUgc2V0IHRleHQgZmlsdGVyIGFjdGlvbiBvYmplY3Qgd2l0aCBjb3JyZWN0IHBhc3NlZCBpbiB2YWx1ZScsICgpID0+IHtcbiAgY29uc3QgYWN0aW9uID0gc2V0VGV4dEZpbHRlcignU29tZXRoaW5nJyk7XG5cbiAgZXhwZWN0KGFjdGlvbikudG9FcXVhbCh7XG4gICAgdHlwZTogJ1NFVF9URVhUX0ZJTFRFUicsXG4gICAgdGV4dDogJ1NvbWV0aGluZydcbiAgfSk7XG59KTtcbiJdfQ==

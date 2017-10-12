@@ -1,0 +1,28 @@
+204e2efab0d6cd41e9574047d7824bbe
+'use strict'; // basics of how testing works
+
+// failing test
+//const add = (a, b) => a + b + 1;
+
+// passing test
+var add = function add(a, b) {return a + b;};
+
+// test - global variable provided by JEST
+test('should add 2 numbers', function () {
+  // test will not pass if we throw an error from this function
+  var result = add(3, 4);
+  /* This works but JEST provides us it's own assertion library, use it like below
+                          if(result !== 7) {
+                            throw new Error(`You added 4 and 3, the result was #${result}, expected 7`)
+                          }*/
+  expect(result).toBe(7);
+});
+
+// another
+var generateGreeting = function generateGreeting(name) {return 'Hello ' + name + '!';};
+
+test('should generate correct greeting', function () {
+  var result = generateGreeting('Mike');
+  expect(result).toBe('Hello Mike!');
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC50ZXN0LmpzIl0sIm5hbWVzIjpbImFkZCIsImEiLCJiIiwidGVzdCIsInJlc3VsdCIsImV4cGVjdCIsInRvQmUiLCJnZW5lcmF0ZUdyZWV0aW5nIiwibmFtZSJdLCJtYXBwaW5ncyI6ImNBQUE7O0FBRUE7QUFDQTs7QUFFQTtBQUNBLElBQU1BLE1BQU0sU0FBTkEsR0FBTSxDQUFDQyxDQUFELEVBQUlDLENBQUosVUFBVUQsSUFBSUMsQ0FBZCxFQUFaOztBQUVBO0FBQ0FDLEtBQUssc0JBQUwsRUFBNkIsWUFBTTtBQUNqQztBQUNBLE1BQU1DLFNBQVNKLElBQUksQ0FBSixFQUFPLENBQVAsQ0FBZjtBQUNBOzs7O0FBSUFLLFNBQU9ELE1BQVAsRUFBZUUsSUFBZixDQUFvQixDQUFwQjtBQUNELENBUkQ7O0FBVUE7QUFDQSxJQUFNQyxtQkFBbUIsU0FBbkJBLGdCQUFtQixDQUFDQyxJQUFELHFCQUFtQkEsSUFBbkIsUUFBekI7O0FBRUFMLEtBQUssa0NBQUwsRUFBeUMsWUFBTTtBQUM3QyxNQUFNQyxTQUFTRyxpQkFBaUIsTUFBakIsQ0FBZjtBQUNBRixTQUFPRCxNQUFQLEVBQWVFLElBQWYsQ0FBb0IsYUFBcEI7QUFDRCxDQUhEIiwiZmlsZSI6ImFkZC50ZXN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gYmFzaWNzIG9mIGhvdyB0ZXN0aW5nIHdvcmtzXG5cbi8vIGZhaWxpbmcgdGVzdFxuLy9jb25zdCBhZGQgPSAoYSwgYikgPT4gYSArIGIgKyAxO1xuXG4vLyBwYXNzaW5nIHRlc3RcbmNvbnN0IGFkZCA9IChhLCBiKSA9PiBhICsgYjtcblxuLy8gdGVzdCAtIGdsb2JhbCB2YXJpYWJsZSBwcm92aWRlZCBieSBKRVNUXG50ZXN0KCdzaG91bGQgYWRkIDIgbnVtYmVycycsICgpID0+IHtcbiAgLy8gdGVzdCB3aWxsIG5vdCBwYXNzIGlmIHdlIHRocm93IGFuIGVycm9yIGZyb20gdGhpcyBmdW5jdGlvblxuICBjb25zdCByZXN1bHQgPSBhZGQoMywgNCk7XG4gIC8qIFRoaXMgd29ya3MgYnV0IEpFU1QgcHJvdmlkZXMgdXMgaXQncyBvd24gYXNzZXJ0aW9uIGxpYnJhcnksIHVzZSBpdCBsaWtlIGJlbG93XG4gIGlmKHJlc3VsdCAhPT0gNykge1xuICAgIHRocm93IG5ldyBFcnJvcihgWW91IGFkZGVkIDQgYW5kIDMsIHRoZSByZXN1bHQgd2FzICMke3Jlc3VsdH0sIGV4cGVjdGVkIDdgKVxuICB9Ki9cbiAgZXhwZWN0KHJlc3VsdCkudG9CZSg3KTtcbn0pO1xuXG4vLyBhbm90aGVyXG5jb25zdCBnZW5lcmF0ZUdyZWV0aW5nID0gKG5hbWUpID0+IGBIZWxsbyAke25hbWV9IWA7XG5cbnRlc3QoJ3Nob3VsZCBnZW5lcmF0ZSBjb3JyZWN0IGdyZWV0aW5nJywgKCkgPT4ge1xuICBjb25zdCByZXN1bHQgPSBnZW5lcmF0ZUdyZWV0aW5nKCdNaWtlJyk7XG4gIGV4cGVjdChyZXN1bHQpLnRvQmUoJ0hlbGxvIE1pa2UhJyk7XG59KTtcbiJdfQ==

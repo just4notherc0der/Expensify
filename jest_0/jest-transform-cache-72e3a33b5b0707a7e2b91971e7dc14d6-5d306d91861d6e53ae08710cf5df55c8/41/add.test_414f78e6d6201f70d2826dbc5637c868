@@ -1,0 +1,10 @@
+627b2cba2f48280ace87551c59f6de72
+'use strict'; // basics of how testing works
+
+var add = function add(a, b) {return a + b;};
+
+// test - global variable provided by JEST
+test('should add 2 numbers', function () {
+  var result = add(3, 4);
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC50ZXN0LmpzIl0sIm5hbWVzIjpbImFkZCIsImEiLCJiIiwidGVzdCIsInJlc3VsdCJdLCJtYXBwaW5ncyI6ImNBQUE7O0FBRUEsSUFBTUEsTUFBTSxTQUFOQSxHQUFNLENBQUNDLENBQUQsRUFBSUMsQ0FBSixVQUFVRCxJQUFJQyxDQUFkLEVBQVo7O0FBRUE7QUFDQUMsS0FBSyxzQkFBTCxFQUE2QixZQUFNO0FBQ2pDLE1BQU1DLFNBQVNKLElBQUksQ0FBSixFQUFPLENBQVAsQ0FBZjtBQUNELENBRkQiLCJmaWxlIjoiYWRkLnRlc3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBiYXNpY3Mgb2YgaG93IHRlc3Rpbmcgd29ya3NcblxuY29uc3QgYWRkID0gKGEsIGIpID0+IGEgKyBiO1xuXG4vLyB0ZXN0IC0gZ2xvYmFsIHZhcmlhYmxlIHByb3ZpZGVkIGJ5IEpFU1RcbnRlc3QoJ3Nob3VsZCBhZGQgMiBudW1iZXJzJywgKCkgPT4ge1xuICBjb25zdCByZXN1bHQgPSBhZGQoMywgNCk7XG59KTtcbiJdfQ==

@@ -1,0 +1,52 @@
+df44d177ea0d6116f4b0e06257bd4345
+'use strict';var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _expenses = require('../../actions/expenses');
+
+// removeExpense
+test('should setup remove expense action object', function () {
+  var action = (0, _expenses.removeExpense)({ id: '123abc' });
+  /* This test will ail because toBe compares 2 values with ===, and 2 objects are never the same when comared with === operator
+                                                               expect(action).toBe({
+                                                                 type: 'REMOVE_EXPENSE',
+                                                                 id: '123abc'
+                                                               });*/
+  expect(action).toEqual({
+    type: 'REMOVE_EXPENSE',
+    id: '123abc' });
+
+});
+
+// editExpense
+test('should setup edit expense action object', function () {
+  var action = (0, _expenses.editExpense)('someID123', { note: 'Now Note' });
+  expect(action).toEqual({
+    type: 'EDIT_EXPENSE',
+    id: 'someID123',
+    updates: {
+      note: 'Now Note' } });
+
+
+});
+
+// addExpense
+test('Should setup add expense action object with provided values', function () {
+  var expenseData = {
+    description: 'Rent',
+    amount: 102800,
+    createdAt: 1000,
+    note: 'This was last months rent' };
+
+  var action = (0, _expenses.addExpense)(expenseData);
+
+  expect(action).toEqual({
+    type: 'ADD_EXPENSE',
+    expense: _extends({},
+    expenseData, {
+      id: expect.any(String) // because id is dynamically assigned 
+    }) });
+
+});
+
+test('Should setup add expense action object with default values', function () {
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV4cGVuc2VzLnRlc3QuanMiXSwibmFtZXMiOlsidGVzdCIsImFjdGlvbiIsImlkIiwiZXhwZWN0IiwidG9FcXVhbCIsInR5cGUiLCJub3RlIiwidXBkYXRlcyIsImV4cGVuc2VEYXRhIiwiZGVzY3JpcHRpb24iLCJhbW91bnQiLCJjcmVhdGVkQXQiLCJleHBlbnNlIiwiYW55IiwiU3RyaW5nIl0sIm1hcHBpbmdzIjoib1FBQUE7O0FBRUE7QUFDQUEsS0FBSywyQ0FBTCxFQUFrRCxZQUFNO0FBQ3RELE1BQU1DLFNBQVMsNkJBQWMsRUFBRUMsSUFBSSxRQUFOLEVBQWQsQ0FBZjtBQUNBOzs7OztBQUtBQyxTQUFPRixNQUFQLEVBQWVHLE9BQWYsQ0FBdUI7QUFDckJDLFVBQU0sZ0JBRGU7QUFFckJILFFBQUksUUFGaUIsRUFBdkI7O0FBSUQsQ0FYRDs7QUFhQTtBQUNBRixLQUFLLHlDQUFMLEVBQWdELFlBQU07QUFDcEQsTUFBTUMsU0FBUywyQkFBWSxXQUFaLEVBQXlCLEVBQUVLLE1BQU0sVUFBUixFQUF6QixDQUFmO0FBQ0FILFNBQU9GLE1BQVAsRUFBZUcsT0FBZixDQUF1QjtBQUNyQkMsVUFBTSxjQURlO0FBRXJCSCxRQUFJLFdBRmlCO0FBR3JCSyxhQUFTO0FBQ1BELFlBQU0sVUFEQyxFQUhZLEVBQXZCOzs7QUFPRCxDQVREOztBQVdBO0FBQ0FOLEtBQUssNkRBQUwsRUFBb0UsWUFBTTtBQUN4RSxNQUFNUSxjQUFjO0FBQ2xCQyxpQkFBYSxNQURLO0FBRWxCQyxZQUFRLE1BRlU7QUFHbEJDLGVBQVcsSUFITztBQUlsQkwsVUFBTSwyQkFKWSxFQUFwQjs7QUFNQSxNQUFNTCxTQUFTLDBCQUFXTyxXQUFYLENBQWY7O0FBRUFMLFNBQU9GLE1BQVAsRUFBZUcsT0FBZixDQUF1QjtBQUNyQkMsVUFBTSxhQURlO0FBRXJCTztBQUNLSixlQURMO0FBRUVOLFVBQUlDLE9BQU9VLEdBQVAsQ0FBV0MsTUFBWCxDQUZOLENBRXlCO0FBRnpCLE1BRnFCLEVBQXZCOztBQU9ELENBaEJEOztBQWtCQWQsS0FBSyw0REFBTCxFQUFtRSxZQUFNOztBQUV4RSxDQUZEIiwiZmlsZSI6ImV4cGVuc2VzLnRlc3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBhZGRFeHBlbnNlLCBlZGl0RXhwZW5zZSwgcmVtb3ZlRXhwZW5zZSB9IGZyb20gJy4uLy4uL2FjdGlvbnMvZXhwZW5zZXMnO1xuXG4vLyByZW1vdmVFeHBlbnNlXG50ZXN0KCdzaG91bGQgc2V0dXAgcmVtb3ZlIGV4cGVuc2UgYWN0aW9uIG9iamVjdCcsICgpID0+IHtcbiAgY29uc3QgYWN0aW9uID0gcmVtb3ZlRXhwZW5zZSh7IGlkOiAnMTIzYWJjJyB9KTtcbiAgLyogVGhpcyB0ZXN0IHdpbGwgYWlsIGJlY2F1c2UgdG9CZSBjb21wYXJlcyAyIHZhbHVlcyB3aXRoID09PSwgYW5kIDIgb2JqZWN0cyBhcmUgbmV2ZXIgdGhlIHNhbWUgd2hlbiBjb21hcmVkIHdpdGggPT09IG9wZXJhdG9yXG4gIGV4cGVjdChhY3Rpb24pLnRvQmUoe1xuICAgIHR5cGU6ICdSRU1PVkVfRVhQRU5TRScsXG4gICAgaWQ6ICcxMjNhYmMnXG4gIH0pOyovXG4gIGV4cGVjdChhY3Rpb24pLnRvRXF1YWwoe1xuICAgIHR5cGU6ICdSRU1PVkVfRVhQRU5TRScsXG4gICAgaWQ6ICcxMjNhYmMnXG4gIH0pO1xufSk7XG5cbi8vIGVkaXRFeHBlbnNlXG50ZXN0KCdzaG91bGQgc2V0dXAgZWRpdCBleHBlbnNlIGFjdGlvbiBvYmplY3QnLCAoKSA9PiB7XG4gIGNvbnN0IGFjdGlvbiA9IGVkaXRFeHBlbnNlKCdzb21lSUQxMjMnLCB7IG5vdGU6ICdOb3cgTm90ZScgfSk7XG4gIGV4cGVjdChhY3Rpb24pLnRvRXF1YWwoe1xuICAgIHR5cGU6ICdFRElUX0VYUEVOU0UnLFxuICAgIGlkOiAnc29tZUlEMTIzJyxcbiAgICB1cGRhdGVzOiB7XG4gICAgICBub3RlOiAnTm93IE5vdGUnXG4gICAgfVxuICB9KTtcbn0pO1xuXG4vLyBhZGRFeHBlbnNlXG50ZXN0KCdTaG91bGQgc2V0dXAgYWRkIGV4cGVuc2UgYWN0aW9uIG9iamVjdCB3aXRoIHByb3ZpZGVkIHZhbHVlcycsICgpID0+IHtcbiAgY29uc3QgZXhwZW5zZURhdGEgPSB7XG4gICAgZGVzY3JpcHRpb246ICdSZW50JyxcbiAgICBhbW91bnQ6IDEwMjgwMCxcbiAgICBjcmVhdGVkQXQ6IDEwMDAsXG4gICAgbm90ZTogJ1RoaXMgd2FzIGxhc3QgbW9udGhzIHJlbnQnXG4gIH07XG4gIGNvbnN0IGFjdGlvbiA9IGFkZEV4cGVuc2UoZXhwZW5zZURhdGEpO1xuXG4gIGV4cGVjdChhY3Rpb24pLnRvRXF1YWwoe1xuICAgIHR5cGU6ICdBRERfRVhQRU5TRScsXG4gICAgZXhwZW5zZToge1xuICAgICAgLi4uZXhwZW5zZURhdGEsXG4gICAgICBpZDogZXhwZWN0LmFueShTdHJpbmcpIC8vIGJlY2F1c2UgaWQgaXMgZHluYW1pY2FsbHkgYXNzaWduZWQgXG4gICAgfVxuICB9KTtcbn0pO1xuXG50ZXN0KCdTaG91bGQgc2V0dXAgYWRkIGV4cGVuc2UgYWN0aW9uIG9iamVjdCB3aXRoIGRlZmF1bHQgdmFsdWVzJywgKCkgPT4ge1xuXG59KTtcbiJdfQ==

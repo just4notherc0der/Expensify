@@ -1,0 +1,11 @@
+4c8fd7a0c8cdbefb23b698dbe25bdb42
+'use strict';var _expenses = require('../../actions/expenses');
+
+test('should setup remove expense action object', function () {
+  var action = (0, _expenses.removeExpense)({ id: '123abc' });
+  expect(action).toBe({
+    type: 'REMOVE_EXPENSE',
+    id: '123abc' });
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV4cGVuc2VzLnRlc3QuanMiXSwibmFtZXMiOlsidGVzdCIsImFjdGlvbiIsImlkIiwiZXhwZWN0IiwidG9CZSIsInR5cGUiXSwibWFwcGluZ3MiOiJhQUFBOztBQUVBQSxLQUFLLDJDQUFMLEVBQWtELFlBQU07QUFDdEQsTUFBTUMsU0FBUyw2QkFBYyxFQUFFQyxJQUFJLFFBQU4sRUFBZCxDQUFmO0FBQ0FDLFNBQU9GLE1BQVAsRUFBZUcsSUFBZixDQUFvQjtBQUNsQkMsVUFBTSxnQkFEWTtBQUVsQkgsUUFBSSxRQUZjLEVBQXBCOztBQUlELENBTkQiLCJmaWxlIjoiZXhwZW5zZXMudGVzdC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGFkZEV4cGVuc2UsIGVkaXRFeHBlbnNlLCByZW1vdmVFeHBlbnNlIH0gZnJvbSAnLi4vLi4vYWN0aW9ucy9leHBlbnNlcyc7XG5cbnRlc3QoJ3Nob3VsZCBzZXR1cCByZW1vdmUgZXhwZW5zZSBhY3Rpb24gb2JqZWN0JywgKCkgPT4ge1xuICBjb25zdCBhY3Rpb24gPSByZW1vdmVFeHBlbnNlKHsgaWQ6ICcxMjNhYmMnIH0pO1xuICBleHBlY3QoYWN0aW9uKS50b0JlKHtcbiAgICB0eXBlOiAnUkVNT1ZFX0VYUEVOU0UnLFxuICAgIGlkOiAnMTIzYWJjJ1xuICB9KTtcbn0pO1xuIl19

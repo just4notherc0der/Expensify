@@ -1,0 +1,55 @@
+346188eae24cf7000cdbc15c12188287
+'use strict';var _filters = require('../../actions/filters');
+
+
+
+
+
+
+
+/* These work differently, setup later
+                                                              test('should generate set start date action object', () => {
+                                                                const action = setStartDate(moment(0));
+                                                              
+                                                                expect(action).toEqual({
+                                                                  type: 'SET_START_DATE',
+                                                                  startDate: moment(0)
+                                                                })
+                                                              });
+                                                              
+                                                              test('should generate set end date action object', () => {
+                                                                const action = setEndDate(moment(0));
+                                                              
+                                                                expect(action).toEqual({
+                                                                  type: 'SET_END_DATE',
+                                                                  endDate: moment(0)
+                                                                })
+                                                              });*/
+
+// sortByDate
+test('Should generate sort by date action object', function () {
+  var action = (0, _filters.sortByDate)();
+
+  expect(action).toEqual({
+    type: 'SORT_BY_DATE' });
+
+});
+
+// sortByAmount
+test('Should generate sort by amount action object', function () {
+  var action = (0, _filters.sortByAmount)();
+
+  expect(action).toEqual({
+    type: 'SORT_BY_AMOUNT' });
+
+});
+
+// setTextFilter
+test('Should generate set text filter action object with correct passed in value', function () {
+  var action = (0, _filters.setTextFilter)();
+
+  expect(action).toEqual({
+    type: 'SET_TEXT_FILTER' });
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpbHRlcnMudGVzdC5qcyJdLCJuYW1lcyI6WyJ0ZXN0IiwiYWN0aW9uIiwiZXhwZWN0IiwidG9FcXVhbCIsInR5cGUiXSwibWFwcGluZ3MiOiJhQUFBOzs7Ozs7OztBQVFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBbUJBO0FBQ0FBLEtBQUssNENBQUwsRUFBbUQsWUFBTTtBQUN2RCxNQUFNQyxTQUFTLDBCQUFmOztBQUVBQyxTQUFPRCxNQUFQLEVBQWVFLE9BQWYsQ0FBdUI7QUFDckJDLFVBQU0sY0FEZSxFQUF2Qjs7QUFHRCxDQU5EOztBQVFBO0FBQ0FKLEtBQUssOENBQUwsRUFBcUQsWUFBTTtBQUN6RCxNQUFNQyxTQUFTLDRCQUFmOztBQUVBQyxTQUFPRCxNQUFQLEVBQWVFLE9BQWYsQ0FBdUI7QUFDckJDLFVBQU0sZ0JBRGUsRUFBdkI7O0FBR0QsQ0FORDs7QUFRQTtBQUNBSixLQUFLLDRFQUFMLEVBQW1GLFlBQU07QUFDdkYsTUFBTUMsU0FBUyw2QkFBZjs7QUFFQUMsU0FBT0QsTUFBUCxFQUFlRSxPQUFmLENBQXVCO0FBQ3JCQyxVQUFNLGlCQURlLEVBQXZCOztBQUdELENBTkQiLCJmaWxlIjoiZmlsdGVycy50ZXN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtcbiAgc2V0U3RhcnREYXRlLFxuICBzZXRFbmREYXRlLFxuICBzb3J0QnlEYXRlLFxuICBzb3J0QnlBbW91bnQsXG4gIHNldFRleHRGaWx0ZXJcbn0gZnJvbSAnLi4vLi4vYWN0aW9ucy9maWx0ZXJzJztcblxuLyogVGhlc2Ugd29yayBkaWZmZXJlbnRseSwgc2V0dXAgbGF0ZXJcbnRlc3QoJ3Nob3VsZCBnZW5lcmF0ZSBzZXQgc3RhcnQgZGF0ZSBhY3Rpb24gb2JqZWN0JywgKCkgPT4ge1xuICBjb25zdCBhY3Rpb24gPSBzZXRTdGFydERhdGUobW9tZW50KDApKTtcblxuICBleHBlY3QoYWN0aW9uKS50b0VxdWFsKHtcbiAgICB0eXBlOiAnU0VUX1NUQVJUX0RBVEUnLFxuICAgIHN0YXJ0RGF0ZTogbW9tZW50KDApXG4gIH0pXG59KTtcblxudGVzdCgnc2hvdWxkIGdlbmVyYXRlIHNldCBlbmQgZGF0ZSBhY3Rpb24gb2JqZWN0JywgKCkgPT4ge1xuICBjb25zdCBhY3Rpb24gPSBzZXRFbmREYXRlKG1vbWVudCgwKSk7XG5cbiAgZXhwZWN0KGFjdGlvbikudG9FcXVhbCh7XG4gICAgdHlwZTogJ1NFVF9FTkRfREFURScsXG4gICAgZW5kRGF0ZTogbW9tZW50KDApXG4gIH0pXG59KTsqL1xuXG4vLyBzb3J0QnlEYXRlXG50ZXN0KCdTaG91bGQgZ2VuZXJhdGUgc29ydCBieSBkYXRlIGFjdGlvbiBvYmplY3QnLCAoKSA9PiB7XG4gIGNvbnN0IGFjdGlvbiA9IHNvcnRCeURhdGUoKTtcblxuICBleHBlY3QoYWN0aW9uKS50b0VxdWFsKHtcbiAgICB0eXBlOiAnU09SVF9CWV9EQVRFJ1xuICB9KTtcbn0pO1xuXG4vLyBzb3J0QnlBbW91bnRcbnRlc3QoJ1Nob3VsZCBnZW5lcmF0ZSBzb3J0IGJ5IGFtb3VudCBhY3Rpb24gb2JqZWN0JywgKCkgPT4ge1xuICBjb25zdCBhY3Rpb24gPSBzb3J0QnlBbW91bnQoKTtcblxuICBleHBlY3QoYWN0aW9uKS50b0VxdWFsKHtcbiAgICB0eXBlOiAnU09SVF9CWV9BTU9VTlQnXG4gIH0pO1xufSk7XG5cbi8vIHNldFRleHRGaWx0ZXJcbnRlc3QoJ1Nob3VsZCBnZW5lcmF0ZSBzZXQgdGV4dCBmaWx0ZXIgYWN0aW9uIG9iamVjdCB3aXRoIGNvcnJlY3QgcGFzc2VkIGluIHZhbHVlJywgKCkgPT4ge1xuICBjb25zdCBhY3Rpb24gPSBzZXRUZXh0RmlsdGVyKCk7XG5cbiAgZXhwZWN0KGFjdGlvbikudG9FcXVhbCh7XG4gICAgdHlwZTogJ1NFVF9URVhUX0ZJTFRFUicsXG4gIH0pO1xufSk7XG4iXX0=

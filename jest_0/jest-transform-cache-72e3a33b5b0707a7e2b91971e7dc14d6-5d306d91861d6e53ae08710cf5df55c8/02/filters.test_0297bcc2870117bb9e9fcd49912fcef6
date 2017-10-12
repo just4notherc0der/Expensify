@@ -1,0 +1,22 @@
+fad5017505f7dc17bf32e6e65c5934a5
+'use strict';var _filters = require('../../actions/filters');
+
+/* These work differently, setup later */
+test('should generate set start date action object', function () {
+  var action = (0, _filters.setStartDate)(moment(0));
+
+  expect(action).toEqual({
+    type: 'SET_START_DATE',
+    startDate: moment(0) });
+
+});
+
+test('should generate set end date action object', function () {
+  var action = (0, _filters.setEndDate)(moment(0));
+
+  expect(action).toEqual({
+    type: 'SET_END_DATE',
+    endDate: moment(0) });
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpbHRlcnMudGVzdC5qcyJdLCJuYW1lcyI6WyJ0ZXN0IiwiYWN0aW9uIiwibW9tZW50IiwiZXhwZWN0IiwidG9FcXVhbCIsInR5cGUiLCJzdGFydERhdGUiLCJlbmREYXRlIl0sIm1hcHBpbmdzIjoiYUFBQTs7QUFFQTtBQUNBQSxLQUFLLDhDQUFMLEVBQXFELFlBQU07QUFDekQsTUFBTUMsU0FBUywyQkFBYUMsT0FBTyxDQUFQLENBQWIsQ0FBZjs7QUFFQUMsU0FBT0YsTUFBUCxFQUFlRyxPQUFmLENBQXVCO0FBQ3JCQyxVQUFNLGdCQURlO0FBRXJCQyxlQUFXSixPQUFPLENBQVAsQ0FGVSxFQUF2Qjs7QUFJRCxDQVBEOztBQVNBRixLQUFLLDRDQUFMLEVBQW1ELFlBQU07QUFDdkQsTUFBTUMsU0FBUyx5QkFBV0MsT0FBTyxDQUFQLENBQVgsQ0FBZjs7QUFFQUMsU0FBT0YsTUFBUCxFQUFlRyxPQUFmLENBQXVCO0FBQ3JCQyxVQUFNLGNBRGU7QUFFckJFLGFBQVNMLE9BQU8sQ0FBUCxDQUZZLEVBQXZCOztBQUlELENBUEQiLCJmaWxlIjoiZmlsdGVycy50ZXN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgc2V0U3RhcnREYXRlLCBzZXRFbmREYXRlIH0gZnJvbSAnLi4vLi4vYWN0aW9ucy9maWx0ZXJzJztcblxuLyogVGhlc2Ugd29yayBkaWZmZXJlbnRseSwgc2V0dXAgbGF0ZXIgKi9cbnRlc3QoJ3Nob3VsZCBnZW5lcmF0ZSBzZXQgc3RhcnQgZGF0ZSBhY3Rpb24gb2JqZWN0JywgKCkgPT4ge1xuICBjb25zdCBhY3Rpb24gPSBzZXRTdGFydERhdGUobW9tZW50KDApKTtcblxuICBleHBlY3QoYWN0aW9uKS50b0VxdWFsKHtcbiAgICB0eXBlOiAnU0VUX1NUQVJUX0RBVEUnLFxuICAgIHN0YXJ0RGF0ZTogbW9tZW50KDApXG4gIH0pXG59KTtcblxudGVzdCgnc2hvdWxkIGdlbmVyYXRlIHNldCBlbmQgZGF0ZSBhY3Rpb24gb2JqZWN0JywgKCkgPT4ge1xuICBjb25zdCBhY3Rpb24gPSBzZXRFbmREYXRlKG1vbWVudCgwKSk7XG5cbiAgZXhwZWN0KGFjdGlvbikudG9FcXVhbCh7XG4gICAgdHlwZTogJ1NFVF9FTkRfREFURScsXG4gICAgZW5kRGF0ZTogbW9tZW50KDApXG4gIH0pXG59KTtcbiJdfQ==

@@ -1,0 +1,16 @@
+40953a08001fdf0f200f60ba966f316b
+'use strict';var _expenses = require('../../actions/expenses');
+
+test('should setup remove expense action object', function () {
+  var action = (0, _expenses.removeExpense)({ id: '123abc' });
+  /* This test will ail because toBe compares 2 values with ===, and 2 objects are never the same when comared with === operator
+                                                               expect(action).toBe({
+                                                                 type: 'REMOVE_EXPENSE',
+                                                                 id: '123abc'
+                                                               });*/
+  expect(action).toEqual({
+    type: 'REMOVE_EXPENSE',
+    id: '123abc' });
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV4cGVuc2VzLnRlc3QuanMiXSwibmFtZXMiOlsidGVzdCIsImFjdGlvbiIsImlkIiwiZXhwZWN0IiwidG9FcXVhbCIsInR5cGUiXSwibWFwcGluZ3MiOiJhQUFBOztBQUVBQSxLQUFLLDJDQUFMLEVBQWtELFlBQU07QUFDdEQsTUFBTUMsU0FBUyw2QkFBYyxFQUFFQyxJQUFJLFFBQU4sRUFBZCxDQUFmO0FBQ0E7Ozs7O0FBS0FDLFNBQU9GLE1BQVAsRUFBZUcsT0FBZixDQUF1QjtBQUNyQkMsVUFBTSxnQkFEZTtBQUVyQkgsUUFBSSxRQUZpQixFQUF2Qjs7QUFJRCxDQVhEIiwiZmlsZSI6ImV4cGVuc2VzLnRlc3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBhZGRFeHBlbnNlLCBlZGl0RXhwZW5zZSwgcmVtb3ZlRXhwZW5zZSB9IGZyb20gJy4uLy4uL2FjdGlvbnMvZXhwZW5zZXMnO1xuXG50ZXN0KCdzaG91bGQgc2V0dXAgcmVtb3ZlIGV4cGVuc2UgYWN0aW9uIG9iamVjdCcsICgpID0+IHtcbiAgY29uc3QgYWN0aW9uID0gcmVtb3ZlRXhwZW5zZSh7IGlkOiAnMTIzYWJjJyB9KTtcbiAgLyogVGhpcyB0ZXN0IHdpbGwgYWlsIGJlY2F1c2UgdG9CZSBjb21wYXJlcyAyIHZhbHVlcyB3aXRoID09PSwgYW5kIDIgb2JqZWN0cyBhcmUgbmV2ZXIgdGhlIHNhbWUgd2hlbiBjb21hcmVkIHdpdGggPT09IG9wZXJhdG9yXG4gIGV4cGVjdChhY3Rpb24pLnRvQmUoe1xuICAgIHR5cGU6ICdSRU1PVkVfRVhQRU5TRScsXG4gICAgaWQ6ICcxMjNhYmMnXG4gIH0pOyovXG4gIGV4cGVjdChhY3Rpb24pLnRvRXF1YWwoe1xuICAgIHR5cGU6ICdSRU1PVkVfRVhQRU5TRScsXG4gICAgaWQ6ICcxMjNhYmMnXG4gIH0pO1xufSk7XG4iXX0=

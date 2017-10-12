@@ -1,0 +1,45 @@
+a55d3b2ab1b82d36c2f20d9460318f49
+'use strict';var _expenses = require('../../actions/expenses');
+
+// removeExpense
+test('should setup remove expense action object', function () {
+  var action = (0, _expenses.removeExpense)({ id: '123abc' });
+  /* This test will ail because toBe compares 2 values with ===, and 2 objects are never the same when comared with === operator
+                                                               expect(action).toBe({
+                                                                 type: 'REMOVE_EXPENSE',
+                                                                 id: '123abc'
+                                                               });*/
+  expect(action).toEqual({
+    type: 'REMOVE_EXPENSE',
+    id: '123abc' });
+
+});
+
+// editExpense
+test('should setup edit expense action object', function () {
+  var action = (0, _expenses.editExpense)('someID123', { note: 'Now Note' });
+  expect(action).toEqual({
+    type: 'EDIT_EXPENSE',
+    id: 'someID123',
+    updates: {
+      note: 'Now Note' } });
+
+
+});
+
+// addExpense
+test('Should setup add expense action object with provided values', function () {
+  var expenseData = {
+    description: 'Rent',
+    amount: 102800,
+    createdAt: 1000,
+    note: 'This was last months rent' };
+
+
+  var action = (0, _expenses.addExpense)(expenseData);
+});
+
+test('Should setup add expense action object with default values', function () {
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV4cGVuc2VzLnRlc3QuanMiXSwibmFtZXMiOlsidGVzdCIsImFjdGlvbiIsImlkIiwiZXhwZWN0IiwidG9FcXVhbCIsInR5cGUiLCJub3RlIiwidXBkYXRlcyIsImV4cGVuc2VEYXRhIiwiZGVzY3JpcHRpb24iLCJhbW91bnQiLCJjcmVhdGVkQXQiXSwibWFwcGluZ3MiOiJhQUFBOztBQUVBO0FBQ0FBLEtBQUssMkNBQUwsRUFBa0QsWUFBTTtBQUN0RCxNQUFNQyxTQUFTLDZCQUFjLEVBQUVDLElBQUksUUFBTixFQUFkLENBQWY7QUFDQTs7Ozs7QUFLQUMsU0FBT0YsTUFBUCxFQUFlRyxPQUFmLENBQXVCO0FBQ3JCQyxVQUFNLGdCQURlO0FBRXJCSCxRQUFJLFFBRmlCLEVBQXZCOztBQUlELENBWEQ7O0FBYUE7QUFDQUYsS0FBSyx5Q0FBTCxFQUFnRCxZQUFNO0FBQ3BELE1BQU1DLFNBQVMsMkJBQVksV0FBWixFQUF5QixFQUFFSyxNQUFNLFVBQVIsRUFBekIsQ0FBZjtBQUNBSCxTQUFPRixNQUFQLEVBQWVHLE9BQWYsQ0FBdUI7QUFDckJDLFVBQU0sY0FEZTtBQUVyQkgsUUFBSSxXQUZpQjtBQUdyQkssYUFBUztBQUNQRCxZQUFNLFVBREMsRUFIWSxFQUF2Qjs7O0FBT0QsQ0FURDs7QUFXQTtBQUNBTixLQUFLLDZEQUFMLEVBQW9FLFlBQU07QUFDeEUsTUFBTVEsY0FBYztBQUNsQkMsaUJBQWEsTUFESztBQUVsQkMsWUFBUSxNQUZVO0FBR2xCQyxlQUFXLElBSE87QUFJbEJMLFVBQU0sMkJBSlksRUFBcEI7OztBQU9BLE1BQU1MLFNBQVMsMEJBQVdPLFdBQVgsQ0FBZjtBQUNELENBVEQ7O0FBV0FSLEtBQUssNERBQUwsRUFBbUUsWUFBTTs7QUFFeEUsQ0FGRCIsImZpbGUiOiJleHBlbnNlcy50ZXN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgYWRkRXhwZW5zZSwgZWRpdEV4cGVuc2UsIHJlbW92ZUV4cGVuc2UgfSBmcm9tICcuLi8uLi9hY3Rpb25zL2V4cGVuc2VzJztcblxuLy8gcmVtb3ZlRXhwZW5zZVxudGVzdCgnc2hvdWxkIHNldHVwIHJlbW92ZSBleHBlbnNlIGFjdGlvbiBvYmplY3QnLCAoKSA9PiB7XG4gIGNvbnN0IGFjdGlvbiA9IHJlbW92ZUV4cGVuc2UoeyBpZDogJzEyM2FiYycgfSk7XG4gIC8qIFRoaXMgdGVzdCB3aWxsIGFpbCBiZWNhdXNlIHRvQmUgY29tcGFyZXMgMiB2YWx1ZXMgd2l0aCA9PT0sIGFuZCAyIG9iamVjdHMgYXJlIG5ldmVyIHRoZSBzYW1lIHdoZW4gY29tYXJlZCB3aXRoID09PSBvcGVyYXRvclxuICBleHBlY3QoYWN0aW9uKS50b0JlKHtcbiAgICB0eXBlOiAnUkVNT1ZFX0VYUEVOU0UnLFxuICAgIGlkOiAnMTIzYWJjJ1xuICB9KTsqL1xuICBleHBlY3QoYWN0aW9uKS50b0VxdWFsKHtcbiAgICB0eXBlOiAnUkVNT1ZFX0VYUEVOU0UnLFxuICAgIGlkOiAnMTIzYWJjJ1xuICB9KTtcbn0pO1xuXG4vLyBlZGl0RXhwZW5zZVxudGVzdCgnc2hvdWxkIHNldHVwIGVkaXQgZXhwZW5zZSBhY3Rpb24gb2JqZWN0JywgKCkgPT4ge1xuICBjb25zdCBhY3Rpb24gPSBlZGl0RXhwZW5zZSgnc29tZUlEMTIzJywgeyBub3RlOiAnTm93IE5vdGUnIH0pO1xuICBleHBlY3QoYWN0aW9uKS50b0VxdWFsKHtcbiAgICB0eXBlOiAnRURJVF9FWFBFTlNFJyxcbiAgICBpZDogJ3NvbWVJRDEyMycsXG4gICAgdXBkYXRlczoge1xuICAgICAgbm90ZTogJ05vdyBOb3RlJ1xuICAgIH1cbiAgfSk7XG59KTtcblxuLy8gYWRkRXhwZW5zZVxudGVzdCgnU2hvdWxkIHNldHVwIGFkZCBleHBlbnNlIGFjdGlvbiBvYmplY3Qgd2l0aCBwcm92aWRlZCB2YWx1ZXMnLCAoKSA9PiB7XG4gIGNvbnN0IGV4cGVuc2VEYXRhID0ge1xuICAgIGRlc2NyaXB0aW9uOiAnUmVudCcsXG4gICAgYW1vdW50OiAxMDI4MDAsXG4gICAgY3JlYXRlZEF0OiAxMDAwLFxuICAgIG5vdGU6ICdUaGlzIHdhcyBsYXN0IG1vbnRocyByZW50J1xuICB9O1xuXG4gIGNvbnN0IGFjdGlvbiA9IGFkZEV4cGVuc2UoZXhwZW5zZURhdGEpO1xufSk7XG5cbnRlc3QoJ1Nob3VsZCBzZXR1cCBhZGQgZXhwZW5zZSBhY3Rpb24gb2JqZWN0IHdpdGggZGVmYXVsdCB2YWx1ZXMnLCAoKSA9PiB7XG5cbn0pO1xuIl19

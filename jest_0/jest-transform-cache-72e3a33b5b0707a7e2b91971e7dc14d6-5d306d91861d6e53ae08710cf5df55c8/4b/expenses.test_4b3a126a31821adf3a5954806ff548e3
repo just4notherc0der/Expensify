@@ -1,0 +1,34 @@
+745b75494a98cef84d6800e15d7da9de
+'use strict';var _expenses = require('../../selectors/expenses');var _expenses2 = _interopRequireDefault(_expenses);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// test data
+var expenses = [
+{
+  id: '1',
+  description: 'Gum',
+  note: '',
+  amount: 195,
+  createdAt: 0 },
+
+{
+  id: '2',
+  description: 'Rent',
+  note: '',
+  amount: 13395,
+  createdAt: -1000 },
+
+{
+  id: '3',
+  description: 'League of Legends',
+  note: 'xD',
+  amount: 627363,
+  createdAt: 10000 }];
+
+
+
+
+test('should filter by text value', function () {
+  var results = (0, _expenses2.default)();
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV4cGVuc2VzLnRlc3QuanMiXSwibmFtZXMiOlsiZXhwZW5zZXMiLCJpZCIsImRlc2NyaXB0aW9uIiwibm90ZSIsImFtb3VudCIsImNyZWF0ZWRBdCIsInRlc3QiLCJyZXN1bHRzIl0sIm1hcHBpbmdzIjoiYUFBQSxvRDs7QUFFQTtBQUNBLElBQU1BLFdBQVc7QUFDZjtBQUNFQyxNQUFJLEdBRE47QUFFRUMsZUFBYSxLQUZmO0FBR0VDLFFBQU0sRUFIUjtBQUlFQyxVQUFRLEdBSlY7QUFLRUMsYUFBVyxDQUxiLEVBRGU7O0FBUWY7QUFDRUosTUFBSSxHQUROO0FBRUVDLGVBQWEsTUFGZjtBQUdFQyxRQUFNLEVBSFI7QUFJRUMsVUFBUSxLQUpWO0FBS0VDLGFBQVcsQ0FBQyxJQUxkLEVBUmU7O0FBZWY7QUFDRUosTUFBSSxHQUROO0FBRUVDLGVBQWEsbUJBRmY7QUFHRUMsUUFBTSxJQUhSO0FBSUVDLFVBQVEsTUFKVjtBQUtFQyxhQUFXLEtBTGIsRUFmZSxDQUFqQjs7Ozs7QUF5QkFDLEtBQUssNkJBQUwsRUFBb0MsWUFBTTtBQUN4QyxNQUFNQyxVQUFVLHlCQUFoQjs7QUFFRCxDQUhEIiwiZmlsZSI6ImV4cGVuc2VzLnRlc3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgc2VsZWN0RXhwZW5zZXMgZnJvbSAnLi4vLi4vc2VsZWN0b3JzL2V4cGVuc2VzJztcblxuLy8gdGVzdCBkYXRhXG5jb25zdCBleHBlbnNlcyA9IFtcbiAge1xuICAgIGlkOiAnMScsXG4gICAgZGVzY3JpcHRpb246ICdHdW0nLFxuICAgIG5vdGU6ICcnLFxuICAgIGFtb3VudDogMTk1LFxuICAgIGNyZWF0ZWRBdDogMFxuICB9LFxuICB7XG4gICAgaWQ6ICcyJyxcbiAgICBkZXNjcmlwdGlvbjogJ1JlbnQnLFxuICAgIG5vdGU6ICcnLFxuICAgIGFtb3VudDogMTMzOTUsXG4gICAgY3JlYXRlZEF0OiAtMTAwMFxuICB9LFxuICB7XG4gICAgaWQ6ICczJyxcbiAgICBkZXNjcmlwdGlvbjogJ0xlYWd1ZSBvZiBMZWdlbmRzJyxcbiAgICBub3RlOiAneEQnLFxuICAgIGFtb3VudDogNjI3MzYzLFxuICAgIGNyZWF0ZWRBdDogMTAwMDBcbiAgfSxcbl1cblxuXG50ZXN0KCdzaG91bGQgZmlsdGVyIGJ5IHRleHQgdmFsdWUnLCAoKSA9PiB7XG4gIGNvbnN0IHJlc3VsdHMgPSBzZWxlY3RFeHBlbnNlcygpO1xuXG59KTtcbiJdfQ==

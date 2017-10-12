@@ -1,0 +1,37 @@
+dc9d778f3a983efc5523e75df6cb68e4
+'use strict';var _filters = require('../../actions/filters');
+
+
+
+
+
+
+
+/* These work differently, setup later
+                                                              test('should generate set start date action object', () => {
+                                                                const action = setStartDate(moment(0));
+                                                              
+                                                                expect(action).toEqual({
+                                                                  type: 'SET_START_DATE',
+                                                                  startDate: moment(0)
+                                                                })
+                                                              });
+                                                              
+                                                              test('should generate set end date action object', () => {
+                                                                const action = setEndDate(moment(0));
+                                                              
+                                                                expect(action).toEqual({
+                                                                  type: 'SET_END_DATE',
+                                                                  endDate: moment(0)
+                                                                })
+                                                              });*/
+
+// sortByDate
+test('Should generate sort by date action object', function () {
+  var action = (0, _filters.sortByDate)();
+
+  expect(action).toEqual({
+    type: 'SORT_BY_DATE' });
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpbHRlcnMudGVzdC5qcyJdLCJuYW1lcyI6WyJ0ZXN0IiwiYWN0aW9uIiwiZXhwZWN0IiwidG9FcXVhbCIsInR5cGUiXSwibWFwcGluZ3MiOiJhQUFBOzs7Ozs7OztBQVFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBbUJBO0FBQ0FBLEtBQUssNENBQUwsRUFBbUQsWUFBTTtBQUN2RCxNQUFNQyxTQUFTLDBCQUFmOztBQUVBQyxTQUFPRCxNQUFQLEVBQWVFLE9BQWYsQ0FBdUI7QUFDckJDLFVBQU0sY0FEZSxFQUF2Qjs7QUFHRCxDQU5EIiwiZmlsZSI6ImZpbHRlcnMudGVzdC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7XG4gIHNldFN0YXJ0RGF0ZSxcbiAgc2V0RW5kRGF0ZSxcbiAgc29ydEJ5RGF0ZSxcbiAgc29ydEJ5QW1vdW50LFxuICBzZXRUZXh0RmlsdGVyXG59IGZyb20gJy4uLy4uL2FjdGlvbnMvZmlsdGVycyc7XG5cbi8qIFRoZXNlIHdvcmsgZGlmZmVyZW50bHksIHNldHVwIGxhdGVyXG50ZXN0KCdzaG91bGQgZ2VuZXJhdGUgc2V0IHN0YXJ0IGRhdGUgYWN0aW9uIG9iamVjdCcsICgpID0+IHtcbiAgY29uc3QgYWN0aW9uID0gc2V0U3RhcnREYXRlKG1vbWVudCgwKSk7XG5cbiAgZXhwZWN0KGFjdGlvbikudG9FcXVhbCh7XG4gICAgdHlwZTogJ1NFVF9TVEFSVF9EQVRFJyxcbiAgICBzdGFydERhdGU6IG1vbWVudCgwKVxuICB9KVxufSk7XG5cbnRlc3QoJ3Nob3VsZCBnZW5lcmF0ZSBzZXQgZW5kIGRhdGUgYWN0aW9uIG9iamVjdCcsICgpID0+IHtcbiAgY29uc3QgYWN0aW9uID0gc2V0RW5kRGF0ZShtb21lbnQoMCkpO1xuXG4gIGV4cGVjdChhY3Rpb24pLnRvRXF1YWwoe1xuICAgIHR5cGU6ICdTRVRfRU5EX0RBVEUnLFxuICAgIGVuZERhdGU6IG1vbWVudCgwKVxuICB9KVxufSk7Ki9cblxuLy8gc29ydEJ5RGF0ZVxudGVzdCgnU2hvdWxkIGdlbmVyYXRlIHNvcnQgYnkgZGF0ZSBhY3Rpb24gb2JqZWN0JywgKCkgPT4ge1xuICBjb25zdCBhY3Rpb24gPSBzb3J0QnlEYXRlKCk7XG5cbiAgZXhwZWN0KGFjdGlvbikudG9FcXVhbCh7XG4gICAgdHlwZTogJ1NPUlRfQllfREFURSdcbiAgfSk7XG59KTtcbiJdfQ==

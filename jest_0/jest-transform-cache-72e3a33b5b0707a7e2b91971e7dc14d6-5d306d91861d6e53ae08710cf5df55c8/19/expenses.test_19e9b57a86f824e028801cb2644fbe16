@@ -1,0 +1,18 @@
+10d4365513bcd872a073453735fe591c
+'use strict';var _expenses = require('../../selectors/expenses');var _expenses2 = _interopRequireDefault(_expenses);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// test data
+var expenses = [{
+  id: '1',
+  description: 'Gum',
+  note: '',
+  amount: 195,
+  createdAt: 0 }];
+
+
+
+test('should filter by text value', function () {
+  var results = (0, _expenses2.default)();
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV4cGVuc2VzLnRlc3QuanMiXSwibmFtZXMiOlsiZXhwZW5zZXMiLCJpZCIsImRlc2NyaXB0aW9uIiwibm90ZSIsImFtb3VudCIsImNyZWF0ZWRBdCIsInRlc3QiLCJyZXN1bHRzIl0sIm1hcHBpbmdzIjoiYUFBQSxvRDs7QUFFQTtBQUNBLElBQU1BLFdBQVcsQ0FBQztBQUNoQkMsTUFBSSxHQURZO0FBRWhCQyxlQUFhLEtBRkc7QUFHaEJDLFFBQU0sRUFIVTtBQUloQkMsVUFBUSxHQUpRO0FBS2hCQyxhQUFXLENBTEssRUFBRCxDQUFqQjs7OztBQVNBQyxLQUFLLDZCQUFMLEVBQW9DLFlBQU07QUFDeEMsTUFBTUMsVUFBVSx5QkFBaEI7O0FBRUQsQ0FIRCIsImZpbGUiOiJleHBlbnNlcy50ZXN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHNlbGVjdEV4cGVuc2VzIGZyb20gJy4uLy4uL3NlbGVjdG9ycy9leHBlbnNlcyc7XG5cbi8vIHRlc3QgZGF0YVxuY29uc3QgZXhwZW5zZXMgPSBbe1xuICBpZDogJzEnLFxuICBkZXNjcmlwdGlvbjogJ0d1bScsXG4gIG5vdGU6ICcnLFxuICBhbW91bnQ6IDE5NSxcbiAgY3JlYXRlZEF0OiAwXG59XVxuXG5cbnRlc3QoJ3Nob3VsZCBmaWx0ZXIgYnkgdGV4dCB2YWx1ZScsICgpID0+IHtcbiAgY29uc3QgcmVzdWx0cyA9IHNlbGVjdEV4cGVuc2VzKCk7XG5cbn0pO1xuIl19

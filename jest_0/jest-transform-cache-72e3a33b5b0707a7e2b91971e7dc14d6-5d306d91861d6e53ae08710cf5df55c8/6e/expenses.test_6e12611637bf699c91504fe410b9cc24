@@ -1,0 +1,7 @@
+5973e2b4b014d6b88487f38397cffac8
+'use strict';var _expenses = require('../../actions/expenses');
+
+test('should setup remove expense action object', function () {
+  var action = (0, _expenses.removeExpense)();
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV4cGVuc2VzLnRlc3QuanMiXSwibmFtZXMiOlsidGVzdCIsImFjdGlvbiJdLCJtYXBwaW5ncyI6ImFBQUE7O0FBRUFBLEtBQUssMkNBQUwsRUFBa0QsWUFBTTtBQUN0RCxNQUFNQyxTQUFTLDhCQUFmO0FBQ0QsQ0FGRCIsImZpbGUiOiJleHBlbnNlcy50ZXN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgYWRkRXhwZW5zZSwgZWRpdEV4cGVuc2UsIHJlbW92ZUV4cGVuc2UgfSBmcm9tICcuLi8uLi9hY3Rpb25zL2V4cGVuc2VzJztcblxudGVzdCgnc2hvdWxkIHNldHVwIHJlbW92ZSBleHBlbnNlIGFjdGlvbiBvYmplY3QnLCAoKSA9PiB7XG4gIGNvbnN0IGFjdGlvbiA9IHJlbW92ZUV4cGVuc2UoKTtcbn0pO1xuIl19

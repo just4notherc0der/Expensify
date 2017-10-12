@@ -1,0 +1,20 @@
+0bcb5928ce4887d92962693aefbeaed7
+'use strict'; // basics of how testing works
+
+// failing test
+//const add = (a, b) => a + b + 1;
+
+// passing test
+var add = function add(a, b) {return a + b;};
+
+// test - global variable provided by JEST
+test('should add 2 numbers', function () {
+  // test will not pass if we throw an error from this function
+  var result = add(3, 4);
+  /* This works but JEST provides us it's own assertion library, use it like below
+                          if(result !== 7) {
+                            throw new Error(`You added 4 and 3, the result was #${result}, expected 7`)
+                          }*/
+  expect(result).toBe(7);
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkZC50ZXN0LmpzIl0sIm5hbWVzIjpbImFkZCIsImEiLCJiIiwidGVzdCIsInJlc3VsdCIsImV4cGVjdCIsInRvQmUiXSwibWFwcGluZ3MiOiJjQUFBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQSxJQUFNQSxNQUFNLFNBQU5BLEdBQU0sQ0FBQ0MsQ0FBRCxFQUFJQyxDQUFKLFVBQVVELElBQUlDLENBQWQsRUFBWjs7QUFFQTtBQUNBQyxLQUFLLHNCQUFMLEVBQTZCLFlBQU07QUFDakM7QUFDQSxNQUFNQyxTQUFTSixJQUFJLENBQUosRUFBTyxDQUFQLENBQWY7QUFDQTs7OztBQUlBSyxTQUFPRCxNQUFQLEVBQWVFLElBQWYsQ0FBb0IsQ0FBcEI7QUFDRCxDQVJEIiwiZmlsZSI6ImFkZC50ZXN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gYmFzaWNzIG9mIGhvdyB0ZXN0aW5nIHdvcmtzXG5cbi8vIGZhaWxpbmcgdGVzdFxuLy9jb25zdCBhZGQgPSAoYSwgYikgPT4gYSArIGIgKyAxO1xuXG4vLyBwYXNzaW5nIHRlc3RcbmNvbnN0IGFkZCA9IChhLCBiKSA9PiBhICsgYjtcblxuLy8gdGVzdCAtIGdsb2JhbCB2YXJpYWJsZSBwcm92aWRlZCBieSBKRVNUXG50ZXN0KCdzaG91bGQgYWRkIDIgbnVtYmVycycsICgpID0+IHtcbiAgLy8gdGVzdCB3aWxsIG5vdCBwYXNzIGlmIHdlIHRocm93IGFuIGVycm9yIGZyb20gdGhpcyBmdW5jdGlvblxuICBjb25zdCByZXN1bHQgPSBhZGQoMywgNCk7XG4gIC8qIFRoaXMgd29ya3MgYnV0IEpFU1QgcHJvdmlkZXMgdXMgaXQncyBvd24gYXNzZXJ0aW9uIGxpYnJhcnksIHVzZSBpdCBsaWtlIGJlbG93XG4gIGlmKHJlc3VsdCAhPT0gNykge1xuICAgIHRocm93IG5ldyBFcnJvcihgWW91IGFkZGVkIDQgYW5kIDMsIHRoZSByZXN1bHQgd2FzICMke3Jlc3VsdH0sIGV4cGVjdGVkIDdgKVxuICB9Ki9cbiAgZXhwZWN0KHJlc3VsdCkudG9CZSg3KTtcbn0pO1xuIl19
