@@ -49,4 +49,10 @@ const AdminInfo = withAdminWarning(Info);
 
 ReactDOM.render(<AdminInfo idAdmin={true} info="details" />, document....);
 
+TESTING
+----------
+
+For this application we are going to use JEST testing framework released by Facebook, which integrates well with React.
+
+
 */

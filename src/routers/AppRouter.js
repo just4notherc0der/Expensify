@@ -1,22 +1,22 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from '../components/Header';
-import Dashboard from '../components/Dashboard';
-import Create from '../components/Create';
-import Edit from '../components/Edit';
-import Help from '../components/Help';
-import NotFound from '../components/NotFound';
+import DashboardPage from '../components/DashboardPage';
+import CreatePage from '../components/CreatePage';
+import EditPage from '../components/EditPage';
+import HelpPage from '../components/HelpPage';
+import NotFoundPage from '../components/NotFoundPage';
 
 const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Header />
       <Switch>
-        <Route exact path="/" component={Dashboard} />
-        <Route path="/create" component={Create} />
-        <Route path="/edit" component={Edit} />
-        <Route path="/help" component={Help} />
-        <Route component={NotFound} />
+        <Route exact path="/" component={DashboardPage} />
+        <Route path="/create" component={CreatePage} />
+        <Route path="/edit/:id" component={EditPage} />
+        <Route path="/help" component={HelpPage} />
+        <Route component={NotFoundPage} />
       </Switch>
     </div>
   </BrowserRouter>

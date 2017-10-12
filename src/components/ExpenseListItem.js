@@ -1,17 +1,16 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { removeExpense } from '../actions/expenses';
+import { Link } from 'react-router-dom';
 
 // destructuring props, I could have also done it the usual way
-const ExpenseListItem = ({ dispatch, id, description, amount, createdAt }) => (
+const ExpenseListItem = ({ id, description, amount, createdAt }) => (
   <div>
-    <p>{props.description}</p>
-    <p>{props.amount}</p>
-    <p>{props.createdAt}</p>
-    <button odClick={() => {
-      dispatch(removeExpense({ id }));
-    }}></button>
+    <Link to={`/edit/${id}`}>
+      <p>{description}</p>
+    </Link>
+    <p>{amount}</p>
+    <p>{createdAt}</p>
+    <hr />
   </div>
 );
 
-export default connect()(ExpenseListItem);
+export default ExpenseListItem;
